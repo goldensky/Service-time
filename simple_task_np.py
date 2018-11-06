@@ -17,14 +17,6 @@ def count_time(func):
     return inner
 
 
-@count_time
-def totalTime(input_array, number_of_items):
-    result_array = [0] * number_of_items
-    for item in input_array:
-        smallest_element = result_array[0]
-        heapq.heapreplace(result_array, smallest_element + item)
-    return heapq.nlargest(1, result_array)[0]
-
 
 @count_time
 def totalTime(input_array, number_of_items):
